@@ -71,7 +71,10 @@ WSGI_APPLICATION = 'Tradexa_Backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {},
+    'default': {
+        "ENGINE": 'django.db.backends.sqlite3',
+        'NAME': 'default.db'
+    },
     "users": {
         "ENGINE": 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'users.db',
